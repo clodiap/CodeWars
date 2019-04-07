@@ -27,7 +27,6 @@ def prefill(n,v="undefined")
     n.to_i.times { arry << v }
     return arry
   else
-    # return "#{n} is invalid"
     raise TypeError, "#{n} is invalid"
   end
 end

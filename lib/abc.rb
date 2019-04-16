@@ -17,11 +17,6 @@ def find_a_b(array, number)
   return result
 end
 
-p find_a_b([1,2,3,4,5,6],6)
-p find_a_b([1,2,3],7)
-p find_a_b([1,2,3],6)
-p find_a_b([0,0,2],4)
-
 # autres solutions
 
 # def find_a_b(numbers, c)

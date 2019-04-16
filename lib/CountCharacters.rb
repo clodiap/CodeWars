@@ -9,8 +9,6 @@ def ordered_count(str)
   return arry.uniq
 end
 
-p ordered_count("Code Wars")
-
 # autres solutions :
 =begin
 

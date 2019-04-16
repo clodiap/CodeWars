@@ -27,11 +27,6 @@ def arithmetic(a, b, operator)
   end
 end
 
-p arithmetic(5, 2, "add")
-p arithmetic(5, 2, "subtract")
-p arithmetic(5, 2, "multiply")
-p arithmetic(5, 2, "divide")
-
 
 ## autres solutions
 

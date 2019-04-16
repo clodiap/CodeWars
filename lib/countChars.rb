@@ -7,7 +7,6 @@ def count_chars(s)
   return my_hash
 end
 
-p count_chars("aba")
 
 # autres solutions
 

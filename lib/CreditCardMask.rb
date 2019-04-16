@@ -19,8 +19,6 @@ def maskify(cc)
   return new_cc.join
 end
 
-puts maskify("4556364607935616")
-
 # autres solutions :
 =begin
 def maskify(cc)

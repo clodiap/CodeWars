@@ -19,8 +19,6 @@ def seven(m)
   return [number, count]
 end
 
-p seven(1603)
-
 # Autres solutions
 
 =begin

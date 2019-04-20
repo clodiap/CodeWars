@@ -14,7 +14,6 @@ def goose_filter (birds)
   birds.reject {|bird| geese.any? bird }
 end
 
-p goose_filter(["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"])
 
 # autres solutions
 

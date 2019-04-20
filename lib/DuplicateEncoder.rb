@@ -22,7 +22,6 @@ def duplicate_encoder(string)
   return string_result.join
 end
 
-puts duplicate_encoder("Success")
 
 # autres solutions intéressantes
 =begin

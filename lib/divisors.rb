@@ -12,7 +12,6 @@ def divisors(n)
   return count
 end
 
-puts divisors(30)
 
 # autres solutions
 

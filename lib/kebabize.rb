@@ -7,9 +7,21 @@
 
 #     the returned string should only contain lowercase letters
 
+# My solution
 def kebabize(str)
-  str.index(/[A-Z]/)
-  # str.match(/[[:upper:]]/)
+  while (/[A-Z]/).match?(str)
+    str.insert(str.index(/[A-Z]/), '-')
+    str[str.index(/[A-Z]/)] = str[str.index(/[A-Z]/)].downcase
+  end
+  str.gsub(/[0-9]/,'')
 end
 
-p kebabize('camelsHaveThreeHumps')
+# Others' solution
+
+# def kebabize(str)
+#   str.delete('^A-Za-z').split(/(?=[A-Z])/).join('-').downcase
+# end
+
+# def kebabize(str)
+#   str.gsub(/\d+/, '').gsub(/(?<=.)[A-Z]/, '-\0').downcase
+# end

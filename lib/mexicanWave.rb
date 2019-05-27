@@ -5,32 +5,47 @@ Task
     In this simple Kata your task is to create a function that turns a string into a Mexican Wave. You will be passed a string and you must return that string in an array where an uppercase letter is a person standing up.
 Rules
     1.  The input string will always be lower case but maybe empty.
-
 2.  If the character in the string is whitespace then pass over it as if it was an empty seat.
 Example
-
 wave("hello") => ["Hello", "hEllo", "heLlo", "helLo", "hellO"]
 
 =end
 
-# ["h", "e", "l", "l", "o"]
-# 1ère étape : 1ère lettre en majuscule + dans le tableau array array << word = word[0] + word[0+1..-1]
-# 2ème étape : 2ème lettre en majuscule + dans le tableau array
-
 
 def mexican_wave(string)
-  words = string.split(" ")
-  new_words = []
-  words.each_with_index do |word, i|
-    letters = word.chars
-    letters.each_with_index do |letter, j|
-      word[j] = letter.upcase
-      word = word[0...j] + letter.upcase + word[j..-1]
-      new_words << word
-    end
+  result = []
+  return result if string.length == 0
 
+  (0...string.length).each do |i|
+    if string[i] != ' '
+      new_string = string.downcase
+      new_string.slice!(i)
+      result << new_string.insert(i, string[i].upcase)
+    end
   end
-  return new_words.join(" ")
+  return result
 
 end
-p mexican_wave("hello ça va")
+
+# Others' solutions
+
+# def wave(str)
+#   result = []
+#   chars = str.downcase.chars
+#   chars.each_with_index do |char, idx|
+#     next if char == " "
+#     result << str[0...idx] + char.upcase + str[idx+1..-1]
+#   end
+#   result
+# end
+
+# def wave(str)
+#   wave = []
+#   for i in 0...str.length
+#     word = str.downcase
+#     word[i] = word[i].upcase
+#     wave << word if word[i].match(/[A-Za-z]/)
+#   end
+#   wave
+# end
+

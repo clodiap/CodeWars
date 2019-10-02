@@ -1,4 +1,3 @@
-# https://www.codewars.com/kata/difference-between-biggest-2-numbers/train/ruby
 # #Difference between biggest 2 numbers
 # You have an array of integers. You need to calcurate the difference between 1st biggest number and 2nd biggest number of an array.
 #     diff_big_2([10, 5, 2])
